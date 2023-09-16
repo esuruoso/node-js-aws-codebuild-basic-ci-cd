@@ -1,9 +1,9 @@
 pipeline {
   environment {
     imagename = "oesuruoso/node-web-app"
-    registryCredential = 'oesuruoso'
-    //registryCredential = 'docker'
-        dockerImage = ''
+    //registryCredential = 'oesuruoso'
+    registryCredential = 'docker'
+    dockerImage = ''
   }
   agent any
   stages {
