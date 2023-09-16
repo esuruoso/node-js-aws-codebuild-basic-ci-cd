@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git([url: 'https://github.com/esuruoso/node-js-aws-codebuild-basic-ci-cd.git', branch: 'main', credentialsId: 'github'])
+        git([url: 'https://github.com/esuruoso/node-js-aws-codebuild-basic-ci-cd.git', branch: 'main', credentialsId: 'github_login'])
 
       }
     }
