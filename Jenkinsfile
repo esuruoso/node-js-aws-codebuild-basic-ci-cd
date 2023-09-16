@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    imagename = "oesuruoso/node-web-app"
+    imagename = "harshmanvar/node-web-app"
     registryCredential = 'docker_hub_login'
     //registryCredential = 'docker'
     dockerImage = ''
