@@ -1,8 +1,8 @@
 pipeline {
   environment {
     imagename = "oesuruoso/node-web-app"
-    //registryCredential = 'oesuruoso'
-    registryCredential = 'docker'
+    registryCredential = 'oesuruoso'
+    //registryCredential = 'docker'
     dockerImage = ''
   }
   agent any
