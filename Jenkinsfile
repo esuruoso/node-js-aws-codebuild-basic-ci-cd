@@ -32,7 +32,7 @@ pipeline {
       }
     }
     stage('Deploy to K8s') {
-      agent k8s-AWS-node-1
+      agent {label 'k8s-AWS-node-1'}
       steps{
         script {
           sh "sed -i 's,TEST_IMAGE_NAME,oesuruoso/node-web-app:$BUILD_NUMBER,' deployment.yaml"
