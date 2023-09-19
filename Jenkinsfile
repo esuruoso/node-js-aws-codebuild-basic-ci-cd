@@ -46,10 +46,16 @@ pipeline {
     
     stage('Remove Unused docker image') {
       steps{
-        sh "docker rmi $imagename:$BUILD_NUMBER"
-         sh "docker rmi $imagename:latest"
-
-      }
+        //sh "docker rmi $imagename:$BUILD_NUMBER"
+        //sh "docker rmi $imagename:latest"
+        input 'Deploy to Production?'
+        milestone(1)
+        kubernetesDeploy(
+            kubeconfigId: 'kubeconfig',
+                configs: 'service-green.yaml',
+                enableConfigSubstitution: true
+        )
+      }   
     }
   }
 }
