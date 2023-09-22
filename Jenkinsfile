@@ -38,17 +38,18 @@ pipeline {
         milestone(1)
         kubernetesDeploy(
             kubeconfigId: 'kubeconfig',
-                configs: 'service-green.yaml',
-                enableConfigSubstitution: true
+            configs: 'service-green.yaml',
+            enableConfigSubstitution: true
         )
         //script {
           //sh "sed -i 's,TEST_IMAGE_NAME,oesuruoso/node-web-app:$BUILD_NUMBER,' deployment.yaml"
           //sh "cat deployment.yaml"
           //sh "kubectl --kubeconfig=/home/ec2-user/config get pods"
           //sh "kubectl --kubeconfig=/home/ec2-user/config apply -f deployment.yaml"
-        }
       }
     }
+  }
+}
     
     
     stage('Remove Unused docker image') {
