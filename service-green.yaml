@@ -7,9 +7,9 @@ metadata:
 spec:
   ports:
   - protocol: TCP
-    port: 8081
-    nodePort: 8080
-    //nodePort: 8080
+    port: 8080
+    nodePort: 8081
+    //nodePort: 8081
   //- name: http
     //port: 80
     //targetPort: 80
@@ -43,4 +43,4 @@ spec:
         //image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
         image: $imagename:$BUILD_NUMBER
         ports:
-        - containerPort: 8080
+        - containerPort: 8081
