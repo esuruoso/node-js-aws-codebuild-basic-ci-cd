@@ -7,11 +7,11 @@ metadata:
 spec:
   ports:
   - name: http
-    port: 8081
-    targetPort: 8081
+    port: 80
+    targetPort: 80
   - name: https
     port: 8081
-    targetPort: 8081
+    targetPort: 80
   selector:
     app: test-image-1
     tier: frontend-1
@@ -39,4 +39,4 @@ spec:
         //image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
         image: $imagename:$BUILD_NUMBER
         ports:
-        - containerPort: 8081
+        - containerPort: 80
