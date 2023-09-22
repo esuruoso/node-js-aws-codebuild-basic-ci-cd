@@ -8,10 +8,10 @@ spec:
   ports:
   - name: http
     port: 80
-    targetPort: 80
+    targetPort: 8081
   - name: https
     port: 8080
-    targetPort: 80
+    targetPort: 8081
   selector:
     app: test-image-1
     tier: frontend-1
@@ -35,7 +35,7 @@ spec:
         app: node-web-app
     spec:
       containers:
-      - name: test-image-1
+      - name: node-web-app
         image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
         ports:
         - containerPort: 8081
