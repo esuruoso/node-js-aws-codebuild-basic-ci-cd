@@ -36,6 +36,7 @@ spec:
     spec:
       containers:
       - name: test-image-1
-        image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
+        //image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
+        image: $imagename:$BUILD_NUMBER
         ports:
         - containerPort: 8081
