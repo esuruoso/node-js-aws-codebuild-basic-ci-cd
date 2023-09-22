@@ -23,16 +23,16 @@ kind: Deployment
 metadata:
   name: cicd-sample-deployment
   labels:
-    app: train-schedule
+    app: node-web-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: test-image-1
+      app: node-web-app
   template:
     metadata:
       labels:
-        app: test-image-1
+        app: node-web-app
     spec:
       containers:
       - name: test-image-1
