@@ -6,19 +6,15 @@ metadata:
     app: test-image-1
 spec:
   ports:
-  - protocol: TCP
+  - name: http
     port: 80
-    nodePort: 80
-    //nodePort: 80
-  //- name: http
-    //port: 80
-    //targetPort: 80
-  //- name: https
-    //port: 8080
-    //targetPort: 80
-  //selector:
-    //app: test-image-1
-    //tier: frontend-1
+    targetPort: 80
+  - name: https
+    port: 8080
+    targetPort: 80
+  selector:
+    app: test-image-1
+    tier: frontend-1
 
 ---
 
