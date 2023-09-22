@@ -31,7 +31,7 @@ pipeline {
       }
     }
     stage('Deploy to K8s') {
-      agent {label 'k8s-AWS-node-1'}
+      //agent {label 'k8s-AWS-node-1'}
       steps{
         input 'Deploy to Production?'
         milestone(1)
