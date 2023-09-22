@@ -45,10 +45,8 @@ pipeline {
           //sh "cat deployment.yaml"
           //sh "kubectl --kubeconfig=/home/ec2-user/config get pods"
           //sh "kubectl --kubeconfig=/home/ec2-user/config apply -f deployment.yaml"
-        }
       }
     }
-    
     stage('Remove Unused docker image') {
       steps{
         sh "docker rmi $imagename:$BUILD_NUMBER"
