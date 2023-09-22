@@ -23,19 +23,19 @@ kind: Deployment
 metadata:
   name: cicd-sample-deployment
   labels:
-    app: node-web-app
+    app: test-image-1
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: node-web-app
+      app: test-image-1
   template:
     metadata:
       labels:
-        app: node-web-app
+        app: test-image-1
     spec:
       containers:
-      - name: node-web-app
+      - name: test-image-1
         image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
         ports:
         - containerPort: 8081
