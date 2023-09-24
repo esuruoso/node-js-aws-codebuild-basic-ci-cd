@@ -12,7 +12,6 @@ spec:
   - name: https
     port: 8080
     targetPort: 80
-    nodePort: 8080
   selector:
     app: test-image-1
     tier: frontend-1
