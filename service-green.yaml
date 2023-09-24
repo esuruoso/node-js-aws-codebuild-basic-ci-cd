@@ -8,10 +8,10 @@ spec:
   ports:
   - name: http
     port: 80
-    targetPort: 8080
+    targetPort: 8081
   - name: https
-    port: 8080
-    targetPort: 8080
+    port: 8081
+    targetPort: 8081
   selector:
     app: test-image-1
     tier: frontend-1
@@ -39,4 +39,4 @@ spec:
         //image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
         image: $imagename:$BUILD_NUMBER
         ports:
-        - containerPort: 8080
+        - containerPort: 8081
